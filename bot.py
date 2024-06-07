@@ -17,7 +17,12 @@ from info import SESSION, LOG_CHANNEL, API_ID, API_HASH, BOT_TOKEN, LOG_STR, POR
 from utils import temp
 from typing import Union, Optional, AsyncGenerator
 from pyrogram import types
-	def __init__(self):
+
+class Bot(Client):
+
+    def __init__(self):
+        super().__init__(
+            name=SESSION,
             api_id=API_ID,
             api_hash=API_HASH,
             bot_token=BOT_TOKEN,
